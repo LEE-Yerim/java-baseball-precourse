@@ -25,6 +25,7 @@ public class BaseballGame {
 
                 outputView.outputStrikeBall(strike, ball);
                 if (strike == 3) {
+                    outputView.outputEnd();
                     newInput = false;
                     newGame = inputView.inputNewGame();
                 }
