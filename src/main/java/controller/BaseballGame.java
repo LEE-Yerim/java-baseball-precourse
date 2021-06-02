@@ -1,7 +1,11 @@
 package controller;
 
-public class BaseballGame {
-    public void start(){
+import view.InputView;
 
+public class BaseballGame {
+    InputView inputView = new InputView();
+
+    public void start(){
+        String numbers = inputView.inputNumbers();
     }
 }
