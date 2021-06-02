@@ -13,17 +13,21 @@ public class BaseballGame {
 
     public void start() {
         int newGame = 1;
-        while(newGame == 1) {
+        while (newGame == 1) {
             List<Integer> randomNumbers = createRandomNumbers();
 
-            List<Integer> userNumbers = createUserNumbers();
+            boolean newInput = true;
+            while (newInput) {
+                List<Integer> userNumbers = createUserNumbers();
 
-            int strike = countStrike(randomNumbers, userNumbers);
-            int ball = countBall(randomNumbers, userNumbers);
+                int strike = countStrike(randomNumbers, userNumbers);
+                int ball = countBall(randomNumbers, userNumbers);
 
-            outputView.outputStrikeBall(strike, ball);
-            if (strike == 3) {
-                newGame = inputView.inputNewGame();
+                outputView.outputStrikeBall(strike, ball);
+                if (strike == 3) {
+                    newInput = false;
+                    newGame = inputView.inputNewGame();
+                }
             }
         }
     }
