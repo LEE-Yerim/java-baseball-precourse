@@ -10,7 +10,21 @@ public class BaseballGame {
     InputView inputView = new InputView();
 
     public void start() {
+        List<Integer> randomNumbers = createRandomNumbers();
         List<Integer> userNumbers = createUserNumbers();
+    }
+
+    public List<Integer> createRandomNumbers() {
+        List<Integer> randomNumbers = new ArrayList<>();
+        for (int i = 0; i < NUMBER_OF_NUMBERS; i++) {
+            randomNumbers.add((int) (Math.random() * 9 + 1));
+            for (int j = 0; j < i; j++) {
+                if (randomNumbers.get(i) == randomNumbers.get(j)) {
+                    i--;
+                }
+            }
+        }
+        return randomNumbers;
     }
 
     public List<Integer> createUserNumbers() {
