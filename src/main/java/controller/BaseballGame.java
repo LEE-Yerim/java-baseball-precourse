@@ -1,6 +1,7 @@
 package controller;
 
 import view.InputView;
+import view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,13 +9,17 @@ import java.util.List;
 public class BaseballGame {
     private static final int NUMBER_OF_NUMBERS = 3;
     InputView inputView = new InputView();
+    OutputView outputView = new OutputView();
 
     public void start() {
         List<Integer> randomNumbers = createRandomNumbers();
+
         List<Integer> userNumbers = createUserNumbers();
 
         int strike = countStrike(randomNumbers, userNumbers);
         int ball = countBall(randomNumbers, userNumbers);
+
+        outputView.outputStrikeBall(strike, ball);
     }
 
     public List<Integer> createRandomNumbers() {
