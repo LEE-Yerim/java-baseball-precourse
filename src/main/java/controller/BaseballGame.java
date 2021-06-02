@@ -12,6 +12,9 @@ public class BaseballGame {
     public void start() {
         List<Integer> randomNumbers = createRandomNumbers();
         List<Integer> userNumbers = createUserNumbers();
+
+        int strike = countStrike(randomNumbers, userNumbers);
+        int ball = countBall(randomNumbers, userNumbers);
     }
 
     public List<Integer> createRandomNumbers() {
@@ -38,5 +41,27 @@ public class BaseballGame {
             userNumbers.add(Character.getNumericValue(numbers.charAt(i)));
         }
         return userNumbers;
+    }
+
+    public int countStrike(List<Integer> randomNumbers, List<Integer> userNumbers) {
+        int strike = 0;
+        for (int i = 0; i < NUMBER_OF_NUMBERS; i++) {
+            for (int j = 0; j < NUMBER_OF_NUMBERS; j++) {
+                if (randomNumbers.get(i) == userNumbers.get(j) && i == j)
+                    strike++;
+            }
+        }
+        return strike;
+    }
+
+    public int countBall(List<Integer> randomNumbers, List<Integer> userNumbers) {
+        int ball = 0;
+        for (int i = 0; i < NUMBER_OF_NUMBERS; i++) {
+            for (int j = 0; j < NUMBER_OF_NUMBERS; j++) {
+                if (randomNumbers.get(i) == userNumbers.get(j) && i != j)
+                    ball++;
+            }
+        }
+        return ball;
     }
 }
