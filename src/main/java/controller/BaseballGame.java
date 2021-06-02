@@ -12,14 +12,20 @@ public class BaseballGame {
     OutputView outputView = new OutputView();
 
     public void start() {
-        List<Integer> randomNumbers = createRandomNumbers();
+        int newGame = 1;
+        while(newGame == 1) {
+            List<Integer> randomNumbers = createRandomNumbers();
 
-        List<Integer> userNumbers = createUserNumbers();
+            List<Integer> userNumbers = createUserNumbers();
 
-        int strike = countStrike(randomNumbers, userNumbers);
-        int ball = countBall(randomNumbers, userNumbers);
+            int strike = countStrike(randomNumbers, userNumbers);
+            int ball = countBall(randomNumbers, userNumbers);
 
-        outputView.outputStrikeBall(strike, ball);
+            outputView.outputStrikeBall(strike, ball);
+            if (strike == 3) {
+                newGame = inputView.inputNewGame();
+            }
+        }
     }
 
     public List<Integer> createRandomNumbers() {
