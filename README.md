@@ -37,3 +37,24 @@
   - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 된다.
 - 3항 연산자를 쓰지 않는다.
 - 함수(또는 메소드)가 한 가지 일만 하도록 최대한 작게 만들어라.
+
+## Baseball Game 구현 기능 목록
+- [ ]
+
+### view.InputView 의 기능
+- (Scanner) scanner
+- `InputView#inputNumbers` : 사용자 숫자 입력
+- `InputView#inputNewGame` : 게임 재시작 여부 입력
+
+### view.OutputView 의 기능
+- `OutputView#outputStrikeBall` : 스트라이크, 볼 갯수 출력
+- `OutputView#outputEnd` : 게임 종료 출력
+
+### controller.BaseballGame 의 기능
+- NUMBER_OF_NUMBERS
+- `BaseballGame#start` : 시작. 흐름 제어
+- `BaseballGame#createRandomNumbers` : 컴퓨터 숫자 생성
+- `BaseballGame#createUserNumbers` : 사용자 숫자 생성
+- `BasebalLGame#convertUserNumbers` : 입력받은 숫자를 숫자들로 변경
+- `BaseballGame#countStrike` : 스트라이크 갯수 세기
+- `BaseballGame#countBall` : 볼 갯수 세기
