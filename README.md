@@ -1,9 +1,7 @@
-## ⚾ 숫자 야구
-- [기능 구현 목록](https://github.com/LEE-Yerim/java-baseball-precourse/blob/step1/src/BaseballGame.md)
-- [main](https://github.com/LEE-Yerim/java-baseball-precourse/tree/step1/src/main/java)
-- [test](https://github.com/LEE-Yerim/java-baseball-precourse/tree/step1/src/test/java)
 
-# 숫자 야구
+[NEXTSTEP] FINPC 2021년 U-Space 고급 프로그래밍
+
+# 숫자 야구 - 프리코스
 
 ## 기능 요구 사항
 기본적으로 1부터 9까지 서로 다른 수로 이루어진 3자리의 수를 맞추는 게임이다.
@@ -42,6 +40,11 @@
     - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 된다.
 - 3항 연산자를 쓰지 않는다.
 - 함수(또는 메소드)가 한 가지 일만 하도록 최대한 작게 만들어라.
+
+## ⚾ 숫자 야구
+- [기능 구현 목록](https://github.com/LEE-Yerim/java-baseball-precourse/blob/step1/src/BaseballGame.md)
+- [main](https://github.com/LEE-Yerim/java-baseball-precourse/tree/step1/src/main/java)
+- [test](https://github.com/LEE-Yerim/java-baseball-precourse/tree/step1/src/test/java)
 
 ## Baseball Game 구현 기능 목록
 - [ ]
